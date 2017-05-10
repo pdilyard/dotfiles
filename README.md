@@ -31,6 +31,12 @@ $ fisher
 $ ./install-spacemacs.sh
 ```
 
+**Install burl**
+
+```
+$ ./install-burl.sh
+```
+
 ## Usage
 
 ### Installed tools
@@ -44,6 +50,7 @@ $ ./install-spacemacs.sh
 - `pyenv` - Manage python installations
 - `rbenv` - Manage ruby installations
 - `spacemacs` - Best text editor currently available
+- `burl` - A better way to make HTTP requests. My fish functions also come with a set of aliases that let you type `GET https://www.google.com` for example
 
 ### Installed apps
 
