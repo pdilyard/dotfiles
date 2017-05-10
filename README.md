@@ -37,6 +37,12 @@ $ ./install-spacemacs.sh
 $ ./install-burl.sh
 ```
 
+**Configure dinghy and docker-machine**
+
+```
+$ ./configure-docker-machine.sh
+```
+
 ## Usage
 
 ### Installed tools
