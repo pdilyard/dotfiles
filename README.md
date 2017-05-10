@@ -3,29 +3,30 @@
 **Set sane defaults on macOS**
 
 ```
-./configure-macos.sh
+$ ./configure-macos.sh
 ```
 
 **Install homebrew**
 
 ```
-./install-brew.sh
+$ ./install-brew.sh
 ```
 
 **Install asdf-vm (primarily for elixir and erlang)**
 
 ```
-./install-asdf.sh
+$ ./install-asdf.sh
 ```
 
 **Install fisherman**
 
 ```
-./install-fisherman.sh
+$ ./install-fisherman.sh
+$ fisher
 ```
 
 **Install spacemacs**
 
 ```
-./install-spacemacs.sh
+$ ./install-spacemacs.sh
 ```
