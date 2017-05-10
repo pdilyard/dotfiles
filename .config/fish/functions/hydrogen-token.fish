@@ -53,7 +53,4 @@ function hydrogen-token
   set token (echo $json | jq .token | tr -d '"')
 
   echo $token
-  echo $token | pbcopy
-  echo ''
-  echo 'Copied token to clipboard! (quotes are not included)'
 end
