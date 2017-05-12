@@ -79,6 +79,12 @@ layout 2mon-laptop 'Slack':REPEAT ${monitorRightOneThird}
 layout 2mon-laptop 'Google Chrome':REPEAT ${monitorLeftTwoThirds}
 layout 2mon-laptop 'Emacs':REPEAT ${macbookFull}
 
+# Second monitor w/ monitor as primary
+layout 2mon-monitor 'iTerm2':REPEAT ${monitorRightOneThird}
+layout 2mon-monitor 'Slack':REPEAT ${macbookFull}
+layout 2mon-monitor 'Google Chrome':REPEAT ${macbookFull}
+layout 2mon-monitor 'Emacs':REPEAT ${monitorLeftTwoThirds}
+
 # default layouts
 default 1monitor resolutions:${macbook}
 default 2mon-laptop resolutions:${macbook},${monitor}
@@ -86,3 +92,4 @@ default 2mon-laptop resolutions:${macbook},${monitor}
 # bind layout keys
 bind 1:${movetrigger} layout 1monitor
 bind 2:${movetrigger} layout 2mon-laptop
+bind 3:${movetrigger} layout 2mon-monitor
