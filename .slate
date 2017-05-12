@@ -2,28 +2,48 @@ config defaultToCurrentScreen true
 
 # set screens
 alias macbook 1920x1200
+alias monitor 2560x1440
 
 # variables
-alias offsetTopLeft screenOriginX+screenSizeX/10;screenOriginY+screenSizeY/7
-alias offsetBottomRight screenSizeX-(screenSizeX/10)*2;screenSizeY-(screenSizeY/7)*2
+alias width screenSizeX
+alias height screenSizeY
+alias originX screenOriginX
+alias originY screenOriginY
+
+alias oneThirdWidth ${width}/3
+alias oneHalfWidth ${width}/2
+alias twoThirdsWidth (${oneThirdWidth}+${oneThirdWidth})
+alias oneHalfHeight ${height}/2
 
 # positions
-alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
-alias center move ${offsetTopLeft} ${offsetBottomRight}
+alias full move ${originX};${originY} ${width};${height}
 
-alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
-alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias leftHalf move ${originX};${originY} ${oneHalfWidth};${height}
+alias rightHalf move (${originX}+${oneHalfWidth});${originY} ${oneHalfWidth};${height}
 
-alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
-alias bottomhalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+alias topHalf move ${originX};${originY} ${width};${oneHalfHeight}
+alias bottomHalf move ${originX};${originY}+${oneHalfHeight} ${width};${oneHalfHeight}
+
+alias leftOneThird move ${originX};${originY} ${oneThirdWidth};${height}
+alias leftTwoThirds move ${originX};${originY} ${twoThirdsWidth};${height}
+alias centerOneThird move ${originX} + ${oneThirdWidth};${originY} ${oneThirdWidth};${height}
+alias rightTwoThirds move (${originX}+${oneThirdWidth});${originY} ${twoThirdsWidth};${height}
+alias rightOneThird move (${originX}+${twoThirdsWidth});${originY} ${oneThirdWidth};${height}
 
 # static positions
-alias macbook-full ${full} ${macbook}
-alias macbook-center ${center} ${macbook}
-alias macbook-left ${lefthalf} ${macbook}
-alias macbook-right ${righthalf} ${macbook}
-alias macbook-top ${tophalf} ${macbook}
-alias macbook-bottom ${bottomhalf} ${macbook}
+alias macbookFull ${full} ${macbook}
+alias macbookLeft ${leftHalf} ${macbook}
+alias macbookRight ${rightHalf} ${macbook}
+alias macbookTop ${topHalf} ${macbook}
+alias macbookBottom ${bottomHalf} ${macbook}
+
+alias monitorFull ${full} ${monitor}
+alias monitorLeft ${leftHalf} ${monitor}
+alias monitorRight ${rightHalf} ${monitor}
+alias monitorTop ${topHalf} ${monitor}
+alias monitorBottom ${bottomHalf} ${monitor}
+alias monitorLeftTwoThirds ${leftTwoThirds} ${monitor}
+alias monitorRightOneThird ${rightOneThird} ${monitor}
 
 # keybinding alias
 alias movetrigger cmd,alt
@@ -37,25 +57,32 @@ bind t:${apptrigger} focus 'iTerm2'
 bind space:${apptrigger} focus 'iTerm2'
 
 # movement keys
-bind left:${movetrigger} ${lefthalf}
-bind right:${movetrigger} ${righthalf}
-bind up:${movetrigger} ${tophalf}
-bind down:${movetrigger} ${bottomhalf}
+bind left:${movetrigger} ${leftHalf}
+bind right:${movetrigger} ${rightHalf}
+bind up:${movetrigger} ${topHalf}
+bind down:${movetrigger} ${bottomHalf}
 bind f:${movetrigger} ${full}
-bind j:${movetrigger} ${center}
 
 # move to other monitors
 bind left:shift,ctrl,cmd throw 0 resize
 bind right:shift,ctrl,cmd throw 1 resize
 
 # Laptop-only layout
-layout 1monitor 'iTerm2':REPEAT ${macbook-center}
-layout 1monitor 'Slack':REPEAT ${macbook-center}
-layout 1monitor 'Google Chrome':REPEAT ${macbook-full}
-layout 1monitor 'Emacs':REPEAT ${macbook-full}
+layout 1monitor 'iTerm2':REPEAT ${macbookFull}
+layout 1monitor 'Slack':REPEAT ${macbookFull}
+layout 1monitor 'Google Chrome':REPEAT ${macbookFull}
+layout 1monitor 'Emacs':REPEAT ${macbookFull}
+
+# Second monitor w/ laptop as primary
+layout 2mon-laptop 'iTerm2':REPEAT ${macbookFull}
+layout 2mon-laptop 'Slack':REPEAT ${monitorRightOneThird}
+layout 2mon-laptop 'Google Chrome':REPEAT ${monitorLeftTwoThirds}
+layout 2mon-laptop 'Emacs':REPEAT ${macbookFull}
 
 # default layouts
 default 1monitor resolutions:${macbook}
+default 2mon-laptop resolutions:${macbook},${monitor}
 
 # bind layout keys
 bind 1:${movetrigger} layout 1monitor
+bind 2:${movetrigger} layout 2mon-laptop
