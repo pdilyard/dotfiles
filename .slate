@@ -47,6 +47,7 @@ alias monitorRightOneThird ${rightOneThird} ${monitor}
 
 # keybinding alias
 alias movetrigger cmd,alt
+alias extramovetrigger shift,cmd,alt
 alias apptrigger ctrl,shift
 
 # quick switching to commonly used apps
@@ -58,9 +59,13 @@ bind space:${apptrigger} focus 'iTerm2'
 
 # movement keys
 bind left:${movetrigger} ${leftHalf}
+bind left:${extramovetrigger} ${leftOneThird}
 bind right:${movetrigger} ${rightHalf}
+bind right:${extramovetrigger} ${rightOneThird}
 bind up:${movetrigger} ${topHalf}
+bind up:${extramovetrigger} ${leftTwoThirds}
 bind down:${movetrigger} ${bottomHalf}
+bind down:${extramovetrigger} ${rightTwoThirds}
 bind f:${movetrigger} ${full}
 
 # move to other monitors
