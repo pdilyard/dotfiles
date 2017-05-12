@@ -1,0 +1,61 @@
+config defaultToCurrentScreen true
+
+# set screens
+alias macbook 1920x1200
+
+# variables
+alias offsetTopLeft screenOriginX+screenSizeX/10;screenOriginY+screenSizeY/7
+alias offsetBottomRight screenSizeX-(screenSizeX/10)*2;screenSizeY-(screenSizeY/7)*2
+
+# positions
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias center move ${offsetTopLeft} ${offsetBottomRight}
+
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+
+alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias bottomhalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+
+# static positions
+alias macbook-full ${full} ${macbook}
+alias macbook-center ${center} ${macbook}
+alias macbook-left ${lefthalf} ${macbook}
+alias macbook-right ${righthalf} ${macbook}
+alias macbook-top ${tophalf} ${macbook}
+alias macbook-bottom ${bottomhalf} ${macbook}
+
+# keybinding alias
+alias movetrigger cmd,alt
+alias apptrigger ctrl,shift
+
+# quick switching to commonly used apps
+bind e:${apptrigger} focus 'Emacs'
+bind c:${apptrigger} focus 'Google Chrome'
+bind s:${apptrigger} focus 'Slack'
+bind t:${apptrigger} focus 'iTerm2'
+bind space:${apptrigger} focus 'iTerm2'
+
+# movement keys
+bind left:${movetrigger} ${lefthalf}
+bind right:${movetrigger} ${righthalf}
+bind up:${movetrigger} ${tophalf}
+bind down:${movetrigger} ${bottomhalf}
+bind f:${movetrigger} ${full}
+bind j:${movetrigger} ${center}
+
+# move to other monitors
+bind left:shift,ctrl,cmd throw 0 resize
+bind right:shift,ctrl,cmd throw 1 resize
+
+# Laptop-only layout
+layout 1monitor 'iTerm2':REPEAT ${macbook-center}
+layout 1monitor 'Slack':REPEAT ${macbook-center}
+layout 1monitor 'Google Chrome':REPEAT ${macbook-full}
+layout 1monitor 'Emacs':REPEAT ${macbook-full}
+
+# default layouts
+default 1monitor resolutions:${macbook}
+
+# bind layout keys
+bind 1:${movetrigger} layout 1monitor
