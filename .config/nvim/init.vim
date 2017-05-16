@@ -9,6 +9,9 @@ Plug 'sjl/gundo.vim'
 " Fuzzy search
 Plug 'kien/ctrlp.vim'
 
+" Automatic syntax highlighting
+Plug 'sheerun/vim-polyglot'
+
 call plug#end()
 
 " Use comma as leader key
