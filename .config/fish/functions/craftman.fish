@@ -1,3 +1,3 @@
 function craftman
-  /Users/pauldilyard/.craftman/bin/craftman
+  /Users/pauldilyard/.craftman/bin/craftman $argv
 end
