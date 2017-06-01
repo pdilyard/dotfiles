@@ -77,14 +77,6 @@ to run docker commands.
 $ ./configure-docker-machine.sh
 ```
 
-**Install craftman**
-
-Let's you actually work on CraftCMS projects.
-
-```
-$ ./install-craftman.sh
-```
-
 ## Usage
 
 ### Installed tools
