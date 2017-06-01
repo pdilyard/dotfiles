@@ -42,7 +42,9 @@ alias monitorLeft ${leftHalf} ${monitor}
 alias monitorRight ${rightHalf} ${monitor}
 alias monitorTop ${topHalf} ${monitor}
 alias monitorBottom ${bottomHalf} ${monitor}
+alias monitorLeftOneThird ${leftOneThird} ${monitor}
 alias monitorLeftTwoThirds ${leftTwoThirds} ${monitor}
+alias monitorRightTwoThirds ${rightTwoThirds} ${monitor}
 alias monitorRightOneThird ${rightOneThird} ${monitor}
 
 # keybinding alias
@@ -80,8 +82,8 @@ layout 1monitor 'Emacs':REPEAT ${macbookFull}
 
 # Second monitor w/ laptop as primary
 layout 2mon-laptop 'iTerm2':REPEAT ${macbookFull}
-layout 2mon-laptop 'Slack':REPEAT ${monitorRightOneThird}
-layout 2mon-laptop 'Google Chrome':REPEAT ${monitorLeftTwoThirds}
+layout 2mon-laptop 'Slack':REPEAT ${monitorLeftOneThird}
+layout 2mon-laptop 'Google Chrome':REPEAT ${monitorRightTwoThirds}
 layout 2mon-laptop 'Emacs':REPEAT ${macbookFull}
 
 # Second monitor w/ monitor as primary
