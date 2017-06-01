@@ -343,7 +343,7 @@ you should place your code here."
     (setq-local css-indent-offset n) ; css-mode
     )
 
-  (defun tab-code-style ()
+  (defun 4-space-tab-code-style ()
     (interactive)
     (message "4 space tabs for people who have no desire to achieve greatness at any point")
     ;; use tabs
@@ -352,7 +352,16 @@ you should place your code here."
     (setup-indentation 4)
     )
 
-  (defun wide-code-style ()
+  (defun 2-space-tab-code-style ()
+    (interactive)
+    (message "2 space tabs for bizarre people")
+    ;; use tabs
+    (setq-local indent-tabs-mode t)
+    ;; use 2 space width
+    (setup-indentation 2)
+    )
+
+  (defun 4-space-code-style ()
     (interactive)
     (message "4 space spaces for fat code")
     ;; use spaces
@@ -361,9 +370,9 @@ you should place your code here."
     (setup-indentation 4)
     )
 
-  (defun normal-code-style ()
+  (defun 2-space-code-style ()
     (interactive)
-    (message "2 space spaces like normal human beings")
+    (message "2 spaces like normal, sane human beings")
     ;; use spaces
     (setq-local indent-tabs-mode nil)
     ;; use 4 space width
@@ -373,10 +382,9 @@ you should place your code here."
   (defun my-development-environment ()
     (interactive)
     (let ((proj-dir (file-name-directory (buffer-file-name))))
-      ;; if hobby project path contains string "hobby-proj1"
       (if (string-match-p "enterprise-desktop-dev" proj-dir)
-          (wide-code-style)
-          (normal-code-style))
+          (4-space-code-style)
+          (2-space-code-style))
       )
     )
 
