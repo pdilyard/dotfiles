@@ -46,6 +46,7 @@ brew 'unixodbc'
 brew 'wget'
 brew 'wxmac'
 brew 'xhyve'
+brew 'yarn'
 brew 'youtube-dl'
 
 cask 'alfred'
