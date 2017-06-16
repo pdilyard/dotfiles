@@ -35,7 +35,7 @@ brew 'php71'
 brew 'postgresql'
 brew 'pyenv'
 brew 'rbenv'
-brew 'reattach-to-user-namespace'
+brew 'reattach-to-user-namespace', args: ['with-wrap-pbcopy-and-pbpaste']
 brew 'readline'
 brew 'roundup'
 brew 'spark'

@@ -82,15 +82,15 @@ layout 1monitor 'Emacs':REPEAT ${macbookFull}
 
 # Second monitor w/ laptop as primary
 layout 2mon-laptop 'iTerm2':REPEAT ${macbookFull}
-layout 2mon-laptop 'Slack':REPEAT ${monitorLeftOneThird}
-layout 2mon-laptop 'Google Chrome':REPEAT ${monitorRightTwoThirds}
+layout 2mon-laptop 'Slack':REPEAT ${monitorRightOneThird}
+layout 2mon-laptop 'Google Chrome':REPEAT ${monitorLeftTwoThirds}
 layout 2mon-laptop 'Emacs':REPEAT ${macbookFull}
 
 # Second monitor w/ monitor as primary
-layout 2mon-monitor 'iTerm2':REPEAT ${monitorRightOneThird}
+layout 2mon-monitor 'iTerm2':REPEAT ${monitorFull}
 layout 2mon-monitor 'Slack':REPEAT ${macbookFull}
 layout 2mon-monitor 'Google Chrome':REPEAT ${macbookFull}
-layout 2mon-monitor 'Emacs':REPEAT ${monitorLeftTwoThirds}
+layout 2mon-monitor 'Emacs':REPEAT ${monitorFull}
 
 # default layouts
 default 1monitor resolutions:${macbook}
