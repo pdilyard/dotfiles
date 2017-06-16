@@ -327,6 +327,9 @@ you should place your code here."
   ;; Don't create .# lockfiles
   (setq create-lockfiles nil)
 
+  ;; NeoTree config
+  (setq neo-theme 'nerd)
+
   ;;
   ;; Indentation setup by
   ;; http://blog.binchen.org/posts/easy-indentation-setup-in-emacs-for-web-development.html
