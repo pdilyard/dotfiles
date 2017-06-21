@@ -39,6 +39,7 @@ brew 'reattach-to-user-namespace', args: ['with-wrap-pbcopy-and-pbpaste']
 brew 'readline'
 brew 'roundup'
 brew 'spark'
+brew 'terraform'
 brew 'the_silver_searcher'
 brew 'tree'
 brew 'tmux'
