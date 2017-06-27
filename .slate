@@ -86,17 +86,24 @@ layout 2mon-laptop 'Slack':REPEAT ${monitorRightOneThird}
 layout 2mon-laptop 'Google Chrome':REPEAT ${monitorLeftTwoThirds}
 layout 2mon-laptop 'Emacs':REPEAT ${macbookFull}
 
-# Second monitor w/ monitor as primary
+# Second monitor w/ monitor as primary, working on more than just code
 layout 2mon-monitor 'iTerm2':REPEAT ${monitorFull}
 layout 2mon-monitor 'Slack':REPEAT ${macbookFull}
-layout 2mon-monitor 'Google Chrome':REPEAT ${macbookFull}
+layout 2mon-monitor 'Google Chrome':REPEAT ${monitorFull}
 layout 2mon-monitor 'Emacs':REPEAT ${monitorFull}
+
+# Second monitor w/ monitor as primary, working on code primarily
+layout 2mon-monitor-code 'iTerm2':REPEAT ${monitorFull}
+layout 2mon-monitor-code 'Slack':REPEAT ${macbookFull}
+layout 2mon-monitor-code 'Google Chrome':REPEAT ${macbookFull}
+layout 2mon-monitor-code 'Emacs':REPEAT ${monitorFull}
 
 # default layouts
 default 1monitor resolutions:${macbook}
-default 2mon-laptop resolutions:${macbook},${monitor}
+default 2mon-monitor resolutions:${macbook},${monitor}
 
 # bind layout keys
 bind 1:${movetrigger} layout 1monitor
-bind 2:${movetrigger} layout 2mon-laptop
-bind 3:${movetrigger} layout 2mon-monitor
+bind 2:${movetrigger} layout 2mon-monitor
+bind 3:${movetrigger} layout 2mon-monitor-code
+bind 4:${movetrigger} layout 2mon-laptop
