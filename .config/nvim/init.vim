@@ -12,6 +12,9 @@ Plug 'kien/ctrlp.vim'
 " Automatic syntax highlighting
 Plug 'sheerun/vim-polyglot'
 
+" Flow syntax highlighting
+Plug 'flowtype/vim-flow'
+
 call plug#end()
 
 " Use comma as leader key
