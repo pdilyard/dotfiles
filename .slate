@@ -2,7 +2,8 @@ config defaultToCurrentScreen true
 
 # set screens
 alias macbook 1920x1200
-alias monitor 2560x1440
+alias mon-retina 1680x1050
+alias mon-lg 2560x1440
 
 # variables
 alias width screenSizeX
@@ -32,20 +33,22 @@ alias rightOneThird move (${originX}+${twoThirdsWidth});${originY} ${oneThirdWid
 
 # static positions
 alias macbookFull ${full} ${macbook}
-alias macbookLeft ${leftHalf} ${macbook}
-alias macbookRight ${rightHalf} ${macbook}
-alias macbookTop ${topHalf} ${macbook}
-alias macbookBottom ${bottomHalf} ${macbook}
 
-alias monitorFull ${full} ${monitor}
-alias monitorLeft ${leftHalf} ${monitor}
-alias monitorRight ${rightHalf} ${monitor}
-alias monitorTop ${topHalf} ${monitor}
-alias monitorBottom ${bottomHalf} ${monitor}
-alias monitorLeftOneThird ${leftOneThird} ${monitor}
-alias monitorLeftTwoThirds ${leftTwoThirds} ${monitor}
-alias monitorRightTwoThirds ${rightTwoThirds} ${monitor}
-alias monitorRightOneThird ${rightOneThird} ${monitor}
+alias retinaFull ${full} ${mon-retina}
+alias retinaLeft ${leftHalf} ${mon-retina}
+alias retinaRight ${rightHalf} ${mon-retina}
+alias retinaTop ${topHalf} ${mon-retina}
+alias retinaBottom ${bottomHalf} ${mon-retina}
+
+alias monitorFull ${full} ${mon-lg}
+alias monitorLeft ${leftHalf} ${mon-lg}
+alias monitorRight ${rightHalf} ${mon-lg}
+alias monitorTop ${topHalf} ${mon-lg}
+alias monitorBottom ${bottomHalf} ${mon-lg}
+alias monitorLeftOneThird ${leftOneThird} ${mon-lg}
+alias monitorLeftTwoThirds ${leftTwoThirds} ${mon-lg}
+alias monitorRightTwoThirds ${rightTwoThirds} ${mon-lg}
+alias monitorRightOneThird ${rightOneThird} ${mon-lg}
 
 # keybinding alias
 alias movetrigger cmd,alt
@@ -75,35 +78,35 @@ bind left:shift,ctrl,cmd throw 0 resize
 bind right:shift,ctrl,cmd throw 1 resize
 
 # Laptop-only layout
-layout 1monitor 'iTerm2':REPEAT ${macbookFull}
-layout 1monitor 'Slack':REPEAT ${macbookFull}
-layout 1monitor 'Google Chrome':REPEAT ${macbookFull}
-layout 1monitor 'Emacs':REPEAT ${macbookFull}
+layout macbook 'iTerm2':REPEAT ${macbookFull}
+layout macbook 'Slack':REPEAT ${macbookFull}
+layout macbook 'Google Chrome':REPEAT ${macbookFull}
+layout macbook 'Emacs':REPEAT ${macbookFull}
 
-# Second monitor w/ laptop as primary
-layout 2mon-laptop 'iTerm2':REPEAT ${macbookFull}
-layout 2mon-laptop 'Slack':REPEAT ${monitorRightOneThird}
-layout 2mon-laptop 'Google Chrome':REPEAT ${monitorLeftTwoThirds}
-layout 2mon-laptop 'Emacs':REPEAT ${macbookFull}
+# Second monitor standard coding
+layout 2mon-std-coding 'iTerm2':REPEAT ${monitorFull}
+layout 2mon-std-coding 'Slack':REPEAT ${retinaFull}
+layout 2mon-std-coding 'Emacs':REPEAT ${monitorFull}
+layout 2mon-std-coding 'Google Chrome':REPEAT ${monitorFull}
 
-# Second monitor w/ monitor as primary, working on more than just code
-layout 2mon-monitor 'iTerm2':REPEAT ${monitorFull}
-layout 2mon-monitor 'Slack':REPEAT ${macbookFull}
-layout 2mon-monitor 'Google Chrome':REPEAT ${monitorFull}
-layout 2mon-monitor 'Emacs':REPEAT ${monitorFull}
+# Second monitor browser coding
+layout 2mon-browser-coding 'iTerm2':REPEAT ${monitorRight}
+layout 2mon-browser-coding 'Slack':REPEAT ${retinaFull}
+layout 2mon-browser-coding 'Emacs':REPEAT ${monitorRight}
+layout 2mon-browser-coding 'Google Chrome':REPEAT ${monitorLeft}
 
-# Second monitor w/ monitor as primary, working on code primarily
-layout 2mon-monitor-code 'iTerm2':REPEAT ${monitorFull}
-layout 2mon-monitor-code 'Slack':REPEAT ${macbookFull}
-layout 2mon-monitor-code 'Google Chrome':REPEAT ${macbookFull}
-layout 2mon-monitor-code 'Emacs':REPEAT ${monitorFull}
+# Second monitor non-coding
+layout 2mon-non-coding 'iTerm2':REPEAT ${retinaFull}
+layout 2mon-non-coding 'Slack':REPEAT ${retinaFull}
+layout 2mon-non-coding 'Emacs':REPEAT ${retinaFull}
+layout 2mon-non-coding 'Google Chrome':REPEAT ${monitorFull}
 
 # default layouts
-default 1monitor resolutions:${macbook}
-default 2mon-monitor resolutions:${macbook},${monitor}
+default macbook resolutions:${macbook}
+default 2mon-std-coding resolutions:${mon-retina},${mon-lg}
 
 # bind layout keys
-bind 1:${movetrigger} layout 1monitor
-bind 2:${movetrigger} layout 2mon-monitor
-bind 3:${movetrigger} layout 2mon-monitor-code
-bind 4:${movetrigger} layout 2mon-laptop
+bind 1:${movetrigger} layout macbook
+bind 2:${movetrigger} layout 2mon-std-coding
+bind 3:${movetrigger} layout 2mon-browser-coding
+bind 4:${movetrigger} layout 2mon-non-coding
