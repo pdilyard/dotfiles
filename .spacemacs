@@ -335,6 +335,11 @@ you should place your code here."
   ;; Use react-mode for JS files
   (add-to-list 'auto-mode-alist '("\\.js$" . react-mode))
 
+  ;; Use <jk> to select auto-completion instead of RET
+  (setq auto-completion-return-key-behavior nil)
+  (setq auto-completion-tab-key-behavior 'cycle)
+  (setq auto-completion-complete-with-key-sequence "jk")
+
   ;;
   ;; Indentation setup by
   ;; http://blog.binchen.org/posts/easy-indentation-setup-in-emacs-for-web-development.html
