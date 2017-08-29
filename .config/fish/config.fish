@@ -8,6 +8,7 @@ abbr lock '/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 abbr ga 'git add'
 abbr gaa 'git add -A'
+abbr gbr 'git browse'
 abbr gc 'git commit'
 abbr gca 'git add -A; git commit'
 abbr gcam 'git add -A; git commit -m'
