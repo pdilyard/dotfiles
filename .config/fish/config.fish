@@ -23,3 +23,4 @@ abbr gs 'git status'
 # Elixir abbreviations
 
 abbr mt 'mix test'
+abbr phx 'iex -S mix phx.server'
