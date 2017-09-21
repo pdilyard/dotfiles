@@ -1,16 +1,20 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'Raimondi/delimitMate' " Auto-complete quotes, parens, etc.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
+Plug 'easymotion/vim-easymotion' " Jump to characters
 Plug 'fholgado/minibufexpl.vim' " Buffer explorer
 Plug 'flowtype/vim-flow' " Flow syntax highlighting
 Plug 'kien/ctrlp.vim' " Fuzzy search
 Plug 'mattn/emmet-vim' " emmet HTML editing
+Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
 Plug 'mileszs/ack.vim' " Search across files
 Plug 'scrooloose/nerdcommenter' " Automatically comment lines
 Plug 'scrooloose/nerdtree' " NERDTree
 Plug 'sheerun/vim-polyglot' " Automatic syntax highlighting
 Plug 'sjl/gundo.vim' " Visual undo tree
+Plug 'terryma/vim-expand-region' " Expand visually selected region
 Plug 'tomasr/molokai' " Colorscheme
 Plug 'tpope/vim-fugitive' " Git integration
 Plug 'tpope/vim-repeat' " Use . for more complex commands
@@ -18,6 +22,7 @@ Plug 'tpope/vim-surround' " Surrounding things in characters
 Plug 'tpope/vim-unimpaired' " Simple mappings for transforming text
 Plug 'vim-airline/vim-airline' " 'powerline'-like status bar
 Plug 'w0rp/ale' " Linters
+Plug 'wellle/targets.vim' " More text objects to operate on (edit next parens)
 
 call plug#end()
 
@@ -38,9 +43,9 @@ inoremap fd <esc>
 colorscheme molokai
 
 " 2-space tabs
-set tabstop=2
-set softtabstop=2
 set expandtab
+set shiftwidth=2
+set softtabstop=2
 
 " Show line numbers
 set number
@@ -70,7 +75,7 @@ set incsearch
 set hlsearch
 
 " Clear search results with C-/
-nnoremap <C-/> :nohlsearch<CR>
+nnoremap <C-s> :nohlsearch<CR>
 
 " Open NERDTree with C-n
 map <C-n> :NERDTreeToggle<CR>
@@ -144,3 +149,9 @@ autocmd FileType html,css EmmetInstall
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+"
+" Yankstack
+"
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
