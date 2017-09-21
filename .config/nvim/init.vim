@@ -5,7 +5,6 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'easymotion/vim-easymotion' " Jump to characters
 Plug 'fholgado/minibufexpl.vim' " Buffer explorer
-Plug 'flowtype/vim-flow' " Flow syntax highlighting
 Plug 'kien/ctrlp.vim' " Fuzzy search
 Plug 'mattn/emmet-vim' " emmet HTML editing
 Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
@@ -21,7 +20,6 @@ Plug 'tpope/vim-repeat' " Use . for more complex commands
 Plug 'tpope/vim-surround' " Surrounding things in characters
 Plug 'tpope/vim-unimpaired' " Simple mappings for transforming text
 Plug 'vim-airline/vim-airline' " 'powerline'-like status bar
-Plug 'w0rp/ale' " Linters
 Plug 'wellle/targets.vim' " More text objects to operate on (edit next parens)
 
 call plug#end()
@@ -105,25 +103,6 @@ let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-
-"
-" Asynchronous Lint Engine (ALE)
-" Limit linters used for JavaScript.
-"
-let g:ale_linters = {
-\  'jsx': ['flow']
-\}
-highlight clear ALEErrorSign " otherwise uses error bg color (typically red)
-highlight clear ALEWarningSign " otherwise uses error bg color (typically red)
-let g:ale_sign_error = 'X' " could use emoji
-let g:ale_sign_warning = '?' " could use emoji
-let g:ale_statusline_format = ['X %d', '? %d', '']
-" %linter% is the name of the linter that provided the message
-" %s is the error or warning message
-let g:ale_echo_msg_format = '%linter% says %s'
-" Map keys to navigate between lines with errors and warnings.
-nnoremap <leader>an :ALENextWrap<cr>
-nnoremap <leader>ap :ALEPreviousWrap<cr>
 
 "
 " NERDCommenter
