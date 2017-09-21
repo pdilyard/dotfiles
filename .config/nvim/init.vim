@@ -87,6 +87,12 @@ set foldlevelstart=10 " if set to 0, everything will be closed by default
 set foldnestmax=10
 set foldmethod=indent
 
+" More natural split opening
+set splitbelow
+set splitright
+nnoremap <C-w>v :vsp<CR>
+nnoremap <C-w>h :sp<CR>
+
 "
 " Plugin-specific configuration
 "
