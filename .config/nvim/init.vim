@@ -5,6 +5,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'easymotion/vim-easymotion' " Jump to characters
 Plug 'fholgado/minibufexpl.vim' " Buffer explorer
+Plug 'jeetsukumaran/vim-buffergator' " Explore buffers more easily
 Plug 'kien/ctrlp.vim' " Fuzzy search
 Plug 'mattn/emmet-vim' " emmet HTML editing
 Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
