@@ -5,8 +5,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'easymotion/vim-easymotion' " Jump to characters
 Plug 'fholgado/minibufexpl.vim' " Buffer explorer
+Plug 'haya14busa/incsearch.vim' " Improved searching
 Plug 'jeetsukumaran/vim-buffergator' " Explore buffers more easily
-Plug 'kien/ctrlp.vim' " Fuzzy search
+Plug 'kien/ctrlp.vim' " Fuzzy file search
 Plug 'mattn/emmet-vim' " emmet HTML editing
 Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
 Plug 'mileszs/ack.vim' " Search across files
@@ -14,6 +15,7 @@ Plug 'scrooloose/nerdcommenter' " Automatically comment lines
 Plug 'scrooloose/nerdtree' " NERDTree
 Plug 'sheerun/vim-polyglot' " Automatic syntax highlighting
 Plug 'sjl/gundo.vim' " Visual undo tree
+Plug 'slashmili/alchemist.vim' " Elixir support
 Plug 'terryma/vim-expand-region' " Expand visually selected region
 Plug 'tomasr/molokai' " Colorscheme
 Plug 'tpope/vim-fugitive' " Git integration
@@ -67,20 +69,11 @@ set lazyredraw
 " Highlight matching braces
 set showmatch
 
-" Search as characters are typed
-set incsearch
-
-" Highlight search results
-set hlsearch
-
 " Clear search results with C-/
 nnoremap <C-s> :nohlsearch<CR>
 
 " Open NERDTree with C-n
 map <C-n> :NERDTreeToggle<CR>
-
-" Open MBE
-map <Leader>t :MBEToggle<CR>
 
 " Enabled folding
 set foldenable
@@ -99,17 +92,17 @@ nnoremap <C-w>h :sp<CR>
 "
 
 "
-" gundo
-"
-nnoremap <leader>u :GundoToggle<CR>
-
-"
 " ctrlp
 "
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+"
+" gundo
+"
+nnoremap <leader>u :GundoToggle<CR>
 
 "
 " NERDCommenter
@@ -141,3 +134,30 @@ endif
 "
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
+"
+" Incsearch
+"
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+
+"
+" Deoplete
+"
+let g:deoplete#enable_at_startup = 1
+
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+    return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+endfunction
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
