@@ -4,7 +4,6 @@ Plug 'Raimondi/delimitMate' " Auto-complete quotes, parens, etc.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'easymotion/vim-easymotion' " Jump to characters
-Plug 'fholgado/minibufexpl.vim' " Buffer explorer
 Plug 'haya14busa/incsearch.vim' " Improved searching
 Plug 'jeetsukumaran/vim-buffergator' " Explore buffers more easily
 Plug 'kien/ctrlp.vim' " Fuzzy file search
