@@ -17,6 +17,7 @@ Plug 'sjl/gundo.vim' " Visual undo tree
 Plug 'slashmili/alchemist.vim' " Elixir support
 Plug 'terryma/vim-expand-region' " Expand visually selected region
 Plug 'tomasr/molokai' " Colorscheme
+Plug 'tpope/vim-endwise' " Auto-insert do/end
 Plug 'tpope/vim-fugitive' " Git integration
 Plug 'tpope/vim-repeat' " Use . for more complex commands
 Plug 'tpope/vim-surround' " Surrounding things in characters
