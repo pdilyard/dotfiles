@@ -88,6 +88,24 @@ nnoremap <C-w>v :vsp<CR>
 nnoremap <C-w>h :sp<CR>
 
 "
+" Strip trailing whitespace
+"
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+autocmd BufWritePre *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html :call <SID>StripTrailingWhitespaces()
+autocmd BufEnter *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html :highlight ExtraWhitespace ctermbg=238 guibg=238
+autocmd BufEnter *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html :match ExtraWhitespace /\s\+$/
+
+"
 " Plugin-specific configuration
 "
 
@@ -120,7 +138,7 @@ let g:NERDTrimTrailingWhitespace = 1
 " Emmet
 "
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType javascript.jsx,html,css EmmetInstall
 
 "
 " Ack
@@ -141,15 +159,7 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-
 set hlsearch
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
 
 "
 " Deoplete
