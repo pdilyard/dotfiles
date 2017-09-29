@@ -56,7 +56,6 @@ alias extramovetrigger shift,cmd,alt
 alias apptrigger ctrl,shift
 
 # quick switching to commonly used apps
-bind e:${apptrigger} focus 'Emacs'
 bind c:${apptrigger} focus 'Google Chrome'
 bind s:${apptrigger} focus 'Slack'
 bind t:${apptrigger} focus 'iTerm2'
@@ -81,25 +80,26 @@ bind right:shift,ctrl,cmd throw 1 resize
 layout macbook 'iTerm2':REPEAT ${macbookFull}
 layout macbook 'Slack':REPEAT ${macbookFull}
 layout macbook 'Google Chrome':REPEAT ${macbookFull}
-layout macbook 'Emacs':REPEAT ${macbookFull}
 
 # Second monitor standard coding
 layout 2mon-std-coding 'iTerm2':REPEAT ${monitorFull}
 layout 2mon-std-coding 'Slack':REPEAT ${retinaFull}
-layout 2mon-std-coding 'Emacs':REPEAT ${monitorFull}
 layout 2mon-std-coding 'Google Chrome':REPEAT ${monitorFull}
 
 # Second monitor browser coding
 layout 2mon-browser-coding 'iTerm2':REPEAT ${monitorRight}
 layout 2mon-browser-coding 'Slack':REPEAT ${retinaFull}
-layout 2mon-browser-coding 'Emacs':REPEAT ${monitorRight}
 layout 2mon-browser-coding 'Google Chrome':REPEAT ${monitorLeft}
 
 # Second monitor non-coding
 layout 2mon-non-coding 'iTerm2':REPEAT ${retinaFull}
 layout 2mon-non-coding 'Slack':REPEAT ${retinaFull}
-layout 2mon-non-coding 'Emacs':REPEAT ${retinaFull}
 layout 2mon-non-coding 'Google Chrome':REPEAT ${monitorFull}
+
+# Second monitor coding, laptop browser
+layout 2mon-coding-only 'iTerm2':REPEAT ${monitorFull}
+layout 2mon-coding-only 'Google Chrome':REPEAT ${retinaFull}
+layout 2mon-coding-only 'Slack':REPEAT ${retinaFull}
 
 # default layouts
 default macbook resolutions:${macbook}
@@ -110,3 +110,4 @@ bind 1:${movetrigger} layout macbook
 bind 2:${movetrigger} layout 2mon-std-coding
 bind 3:${movetrigger} layout 2mon-browser-coding
 bind 4:${movetrigger} layout 2mon-non-coding
+bind 5:${movetrigger} layout 2mon-coding-only
