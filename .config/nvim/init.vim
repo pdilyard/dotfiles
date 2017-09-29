@@ -15,8 +15,10 @@ Plug 'scrooloose/nerdtree' " NERDTree
 Plug 'sheerun/vim-polyglot' " Automatic syntax highlighting
 Plug 'sjl/gundo.vim' " Visual undo tree
 Plug 'slashmili/alchemist.vim' " Elixir support
+Plug 'styled-components/vim-styled-components' " Styled-components highlighting
 Plug 'terryma/vim-expand-region' " Expand visually selected region
 Plug 'tomasr/molokai' " Colorscheme
+Plug 'tpope/tpope-vim-abolish' " Abbreviation, Substitution, Coercion
 Plug 'tpope/vim-endwise' " Auto-insert do/end
 Plug 'tpope/vim-fugitive' " Git integration
 Plug 'tpope/vim-repeat' " Use . for more complex commands
@@ -104,6 +106,9 @@ endfunction
 autocmd BufWritePre *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html :call <SID>StripTrailingWhitespaces()
 autocmd BufEnter *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html :highlight ExtraWhitespace ctermbg=238 guibg=238
 autocmd BufEnter *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html :match ExtraWhitespace /\s\+$/
+
+" Escape in terminal mode
+tnoremap <Esc> <C-\><C-n>
 
 "
 " Plugin-specific configuration
