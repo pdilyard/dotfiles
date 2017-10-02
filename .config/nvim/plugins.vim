@@ -43,6 +43,8 @@ set hlsearch
 "
 let g:user_emmet_install_global = 0
 autocmd FileType javascript.jsx,html,css EmmetInstall
+imap <C-e> <plug>(emmet-expand-abbr)
+nmap <C-e> <plug>(emmet-expand-abbr)
 
 "
 " --------------------------
