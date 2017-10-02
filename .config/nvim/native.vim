@@ -4,14 +4,22 @@
 " Contains keymappings and settings for features that come with neovim by default
 "
 
-" Use comma as leader key
-let mapleader=","
+" Use space as leader key
+let mapleader="\<Space>"
 
-" Use space as command key
-noremap <space> :
+" Use semicolon as command key
+noremap ; :
 
 " fd is escape
 inoremap fd <esc>
+
+" Save file with Leader w
+nnoremap <silent><Leader>w :write<CR>
+vnoremap <silent><Leader>w <Esc>:write<CR>
+
+" Quit with Leader q
+nnoremap <silent><Leader>q :q<CR>
+vnoremap <silent><Leader>q <Esc>:q<CR>
 
 " 2-space tabs
 set expandtab
@@ -57,4 +65,20 @@ nnoremap <C-w>h :sp<CR>
 " Escape in terminal mode
 tnoremap <Esc> <C-\><C-n>
 
+" Strip trailing whitespace on save
 source $HOME/.config/nvim/custom_functions/strip_trailing_whitespace.vim
+
+" Use tab for indenting in visual and normal mode
+vnoremap <Tab> >gv|
+vnoremap <S-Tab> <gv
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+
+" Navigation in command line
+cnoremap <C-j> <Left>
+cnoremap <C-k> <Right>
+cnoremap <C-h> <Home>
+cnoremap <C-l> <End>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+cnoremap <C-d> <C-w>
