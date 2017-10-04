@@ -82,3 +82,7 @@ cnoremap <C-l> <End>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
 cnoremap <C-d> <C-w>
+
+" Go to beginning of line with _
+nnoremap _ ^
+vnoremap _ ^
