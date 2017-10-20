@@ -7,6 +7,9 @@
 " Set ttyfast
 set ttyfast
 
+" Quickly go to prev buffer
+nnoremap <Leader><TAB> <C-^>
+
 " Source config
 nnoremap ced :e ~/.config/nvim/
 nnoremap csv :so ~/.config/nvim/init.vim<CR>
