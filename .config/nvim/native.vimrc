@@ -4,6 +4,12 @@
 " Contains keymappings and settings for features that come with neovim by default
 "
 
+" Use space as leader key
+let mapleader="\<Space>"
+
+" Use semicolon as command key
+noremap ; :
+
 " Set ttyfast
 set ttyfast
 
@@ -13,12 +19,6 @@ nnoremap <Leader><TAB> <C-^>
 " Source config
 nnoremap ced :e ~/.config/nvim/
 nnoremap csv :so ~/.config/nvim/init.vim<CR>
-
-" Use space as leader key
-let mapleader="\<Space>"
-
-" Use semicolon as command key
-noremap ; :
 
 " fd is escape
 inoremap fd <esc>
@@ -92,9 +92,6 @@ cnoremap <C-l> <End>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
 cnoremap <C-d> <C-w>
-
-" Go to beginning of line with _
-map _ ^
 
 " Open up file explorer
 nnoremap <C-f> :Explore<CR>

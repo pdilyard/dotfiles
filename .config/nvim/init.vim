@@ -30,5 +30,5 @@ Plug 'wellle/targets.vim' " More text objects to operate on (edit next parens)
 
 call plug#end()
 
-source $HOME/.config/nvim/native.vim
-source $HOME/.config/nvim/plugins.vim
+source $HOME/.config/nvim/native.vimrc
+source $HOME/.config/nvim/plugins.vimrc
