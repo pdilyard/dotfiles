@@ -4,6 +4,13 @@
 " Contains keymappings and settings for features that come with neovim by default
 "
 
+" Set ttyfast
+set ttyfast
+
+" Source config
+nnoremap ced :e ~/.config/nvim/
+nnoremap csv :so ~/.config/nvim/init.vim<CR>
+
 " Use space as leader key
 let mapleader="\<Space>"
 
@@ -84,5 +91,7 @@ cnoremap <C-b> <Left>
 cnoremap <C-d> <C-w>
 
 " Go to beginning of line with _
-nnoremap _ ^
-vnoremap _ ^
+map _ ^
+
+" Open up file explorer
+nnoremap <C-f> :Explore<CR>

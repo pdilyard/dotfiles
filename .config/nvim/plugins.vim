@@ -5,17 +5,6 @@
 "
 
 "
-" ------------------
-" Shougo/denite.nvim
-" ------------------
-"
-
-" Open a fuzzy finder with C-p
-nnoremap <C-p> :Denite buffer file_rec<CR>
-call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
-call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
-
-"
 " --------------------
 " Shougo/deoplete.nvim
 " --------------------
@@ -37,6 +26,14 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 set hlsearch
+
+"
+" ----------------
+" junegunn/fzf.vim
+" ----------------
+"
+nmap <C-p> :Files<CR>
+nmap <C-b> :Buffers<CR>
 
 "
 " ---------------

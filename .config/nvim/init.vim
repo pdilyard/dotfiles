@@ -1,11 +1,13 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'Raimondi/delimitMate' " Auto-complete quotes, parens, etc.
-Plug 'Shougo/denite.nvim' " Fuzzy finder
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion
+Plug 'ap/vim-css-color' " Highlight hex colors
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'easymotion/vim-easymotion' " Jump to characters
 Plug 'haya14busa/incsearch.vim' " Improved searching
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' } " fzf binary
+Plug 'junegunn/fzf.vim' " fzf vim plugin
 Plug 'mattn/emmet-vim' " emmet HTML editing
 Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
 Plug 'mileszs/ack.vim' " Search across files
