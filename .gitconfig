@@ -7,7 +7,7 @@
 	protocol = https
 [core]
 	excludesfile = ~/.gitignore
-	editor = vim
+	editor = nvim
 [mergetool]
 	keepBackup = false
 [difftool]
