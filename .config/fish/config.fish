@@ -24,3 +24,7 @@ abbr gs 'git status'
 
 abbr mt 'mix test'
 abbr phx 'iex -S mix phx.server'
+
+# Google Compute abbreviations
+
+abbr gssh 'gcloud compute ssh'
