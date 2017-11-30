@@ -38,6 +38,7 @@ set softtabstop=2
 
 " Show line numbers
 set number
+set relativenumber
 
 " Show last command in bottom-right
 set showcmd
@@ -95,3 +96,20 @@ cnoremap <C-d> <C-w>
 
 " Open up file explorer
 nnoremap <C-f> :Explore<CR>
+
+" Copy to clipboard
+vnoremap <leader>y "*y
+nnoremap <leader>Y "*yg_
+nnoremap <leader>y "*y
+nnoremap <leader>yy "*yy
+
+" Insert lines above/below in normal mode
+nnoremap <Leader>k O<Esc>j
+nnoremap <Leader>j o<Esc>k
+
+" Insert spaces left/right in normal mode
+nnoremap <Leader>h  i<space><Esc>l
+nnoremap <Leader>l a<space><Esc>h
+
+" Run a shell command with !
+nnoremap ! :!

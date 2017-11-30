@@ -2,6 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'Raimondi/delimitMate' " Auto-complete quotes, parens, etc.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion
+Plug 'airblade/vim-gitgutter' " Shows a diff in the gutter
 Plug 'ap/vim-css-color' " Highlight hex colors
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'easymotion/vim-easymotion' " Jump to characters
@@ -30,5 +31,5 @@ Plug 'wellle/targets.vim' " More text objects to operate on (edit next parens)
 
 call plug#end()
 
-source $HOME/.config/nvim/native.vimrc
 source $HOME/.config/nvim/plugins.vimrc
+source $HOME/.config/nvim/native.vimrc

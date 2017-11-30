@@ -18,6 +18,16 @@ endfunction
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "
+" ----------------------
+" airblade/vim-gitgutter
+" ----------------------
+"
+nnoremap <Leader>gp <Plug>GitGutterPreviewHunk
+nnoremap <Leader>gr <Plug>GitGutterUndoHunk
+nnoremap <Leader>gu <Plug>GitGutterUndoHunk
+nnoremap <Leader>gs <Plug>GitGutterStageHunk
+
+"
 " ------------------------
 " haya14busa/incsearch.vim
 " ------------------------
