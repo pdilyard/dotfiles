@@ -1,7 +1,5 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'Raimondi/delimitMate' " Auto-complete quotes, parens, etc.
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion
 Plug 'airblade/vim-gitgutter' " Shows a diff in the gutter
 Plug 'ap/vim-css-color' " Highlight hex colors
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
@@ -12,9 +10,12 @@ Plug 'junegunn/fzf.vim' " fzf vim plugin
 Plug 'mattn/emmet-vim' " emmet HTML editing
 Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
 Plug 'mileszs/ack.vim' " Search across files
+Plug 'raimondi/delimitmate' " Auto-complete quotes, parens, etc.
 Plug 'scrooloose/nerdcommenter' " Automatically comment lines
 Plug 'scrooloose/nerdtree' " NERDTree
 Plug 'sheerun/vim-polyglot' " Automatic syntax highlighting
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion
+Plug 'sirver/ultisnips' " Snippet engine
 Plug 'sjl/gundo.vim' " Visual undo tree
 Plug 'slashmili/alchemist.vim' " Elixir support
 Plug 'styled-components/vim-styled-components' " Styled-components highlighting
@@ -31,5 +32,5 @@ Plug 'wellle/targets.vim' " More text objects to operate on (edit next parens)
 
 call plug#end()
 
-source $HOME/.config/nvim/plugins.vimrc
 source $HOME/.config/nvim/native.vimrc
+source $HOME/.config/nvim/plugins.vimrc

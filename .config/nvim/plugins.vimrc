@@ -5,19 +5,6 @@
 "
 
 "
-" --------------------
-" Shougo/deoplete.nvim
-" --------------------
-"
-let g:deoplete#enable_at_startup = 1
-
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-endfunction
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-"
 " ----------------------
 " airblade/vim-gitgutter
 " ----------------------
@@ -26,6 +13,18 @@ nnoremap <Leader>gp <Plug>GitGutterPreviewHunk
 nnoremap <Leader>gr <Plug>GitGutterUndoHunk
 nnoremap <Leader>gu <Plug>GitGutterUndoHunk
 nnoremap <Leader>gs <Plug>GitGutterStageHunk
+
+"
+" -------------------------
+" easymotion/vim-easymotion
+" -------------------------
+"
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+" Jump to character
+nmap S <Plug>(easymotion-overwin-f)
+" Jump to lines
+nmap <Leader><Leader>j <Plug>(easymotion-j)
+nmap <Leader><Leader>k <Plug>(easymotion-k)
 
 "
 " ------------------------
@@ -102,6 +101,29 @@ map <C-n> :NERDTreeToggle<CR>
 " --------------------
 "
 let g:javascript_plugin_flow = 1
+
+"
+" --------------------
+" shougo/deoplete.nvim
+" --------------------
+"
+let g:deoplete#enable_at_startup = 1
+
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+    return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+endfunction
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"
+" ----------------
+" sirver/ultisnips
+" ----------------
+"
+let g:UltiSnipsExpandTrigger="<c-y>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories = ['ultisnips']
 
 "
 " -------------

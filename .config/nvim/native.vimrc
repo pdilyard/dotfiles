@@ -113,3 +113,4 @@ nnoremap <Leader>l a<space><Esc>h
 
 " Run a shell command with !
 nnoremap ! :!
+
