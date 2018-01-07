@@ -21,7 +21,7 @@ nnoremap ced :e ~/.config/nvim/
 nnoremap csv :so ~/.config/nvim/init.vim<CR>
 
 " fd is escape
-inoremap fd <esc>
+inoremap jj <esc>
 
 " Save file with Leader w
 nnoremap <silent><Leader>w :write<CR>

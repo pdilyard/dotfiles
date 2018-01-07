@@ -10,6 +10,7 @@ Plug 'junegunn/fzf.vim' " fzf vim plugin
 Plug 'mattn/emmet-vim' " emmet HTML editing
 Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
 Plug 'mileszs/ack.vim' " Search across files
+Plug 'mtth/scratch.vim' " Scratchpad
 Plug 'raimondi/delimitmate' " Auto-complete quotes, parens, etc.
 Plug 'scrooloose/nerdcommenter' " Automatically comment lines
 Plug 'scrooloose/nerdtree' " NERDTree

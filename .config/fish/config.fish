@@ -28,3 +28,7 @@ abbr phx 'iex -S mix phx.server'
 # Google Compute abbreviations
 
 abbr gssh 'gcloud compute ssh'
+
+# Simple tools
+
+abbr t 'todo.sh'

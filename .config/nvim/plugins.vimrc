@@ -20,11 +20,12 @@ nnoremap <Leader>gs <Plug>GitGutterStageHunk
 " -------------------------
 "
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
+map \ <Plug>(easymotion-prefix)
 " Jump to character
-nmap S <Plug>(easymotion-overwin-f)
+nmap \s <Plug>(easymotion-overwin-f)
 " Jump to lines
-nmap <Leader><Leader>j <Plug>(easymotion-j)
-nmap <Leader><Leader>k <Plug>(easymotion-k)
+nmap \j <Plug>(easymotion-j)
+nmap \k <Plug>(easymotion-k)
 
 "
 " ------------------------
@@ -70,6 +71,16 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+"
+" ----------------
+" mtth/scratch.vim
+" ----------------
+"
+let g:scratch_autohide = 0
+let g:scratch_insert_autohide = 0
+let g:scratch_top = 0
+nnoremap gs :Scratch<CR>
 
 "
 " ------------------------
