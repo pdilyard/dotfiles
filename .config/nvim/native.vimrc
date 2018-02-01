@@ -73,6 +73,12 @@ set splitright
 nnoremap <C-w>v :vsp<CR>
 nnoremap <C-w>h :sp<CR>
 
+" Easy split resizing
+nnoremap <C-up> <C-W>+
+nnoremap <C-down> <C-W>-
+nnoremap <C-left> <C-W><
+nnoremap <C-right> <C-W>>
+
 " Escape in terminal mode
 tnoremap <Esc> <C-\><C-n>
 

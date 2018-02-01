@@ -2,6 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter' " Shows a diff in the gutter
 Plug 'ap/vim-css-color' " Highlight hex colors
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' } " LSP
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'easymotion/vim-easymotion' " Jump to characters
 Plug 'haya14busa/incsearch.vim' " Improved searching
@@ -12,6 +13,7 @@ Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
 Plug 'mileszs/ack.vim' " Search across files
 Plug 'mtth/scratch.vim' " Scratchpad
 Plug 'raimondi/delimitmate' " Auto-complete quotes, parens, etc.
+Plug 'reasonml-editor/vim-reason-plus' " Reason syntax highlighting
 Plug 'scrooloose/nerdcommenter' " Automatically comment lines
 Plug 'scrooloose/nerdtree' " NERDTree
 Plug 'sheerun/vim-polyglot' " Automatic syntax highlighting
