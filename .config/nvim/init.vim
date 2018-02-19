@@ -17,7 +17,7 @@ Plug 'reasonml-editor/vim-reason-plus' " Reason syntax highlighting
 Plug 'scrooloose/nerdcommenter' " Automatically comment lines
 Plug 'scrooloose/nerdtree' " NERDTree
 Plug 'sheerun/vim-polyglot' " Automatic syntax highlighting
-Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'commit': '865747efe41ea1d923758617d71e8e5b59da292e' } " Auto-completion
 Plug 'sirver/ultisnips' " Snippet engine
 Plug 'sjl/gundo.vim' " Visual undo tree
 Plug 'slashmili/alchemist.vim' " Elixir support

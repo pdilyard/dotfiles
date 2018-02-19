@@ -18,6 +18,6 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
-autocmd BufWritePre *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html :call <SID>StripTrailingWhitespaces()
-autocmd BufEnter *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html :highlight ExtraWhitespace ctermbg=238 guibg=238
-autocmd BufEnter *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html :match ExtraWhitespace /\s\+$/
+autocmd BufWritePre *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html,*.elm :call <SID>StripTrailingWhitespaces()
+autocmd BufEnter *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html,*.elm :highlight ExtraWhitespace ctermbg=238 guibg=238
+autocmd BufEnter *.py,*.js,*.jsx,*.ex,*.exs,*.vim,*.html,*.elm :match ExtraWhitespace /\s\+$/
