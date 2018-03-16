@@ -32,3 +32,4 @@ abbr gssh 'gcloud compute ssh'
 # Simple tools
 
 abbr t 'todo.sh'
+abbr tf 'terraform'

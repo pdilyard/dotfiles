@@ -57,6 +57,7 @@ brew 'yarn'
 brew 'youtube-dl'
 
 cask 'alfred'
+cask 'avibrazil-rdm'
 cask 'emacs'
 cask 'firefox'
 cask 'flux'
