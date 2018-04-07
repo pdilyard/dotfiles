@@ -4,6 +4,9 @@ abbr c 'clear'
 abbr l 'ls -al'
 abbr lock '/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
+set -U vim nvim
+set -U SHELL /usr/local/bin/fish
+
 # Git abbreviations
 
 abbr ga 'git add'
