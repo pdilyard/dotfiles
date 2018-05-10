@@ -31,6 +31,7 @@ abbr phx 'iex -S mix phx.server'
 # Google Compute abbreviations
 
 abbr gssh 'gcloud compute ssh'
+abbr k 'kubectl'
 
 # Simple tools
 
