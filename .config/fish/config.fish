@@ -32,6 +32,9 @@ abbr phx 'iex -S mix phx.server'
 
 abbr gssh 'gcloud compute ssh'
 abbr k 'kubectl'
+abbr sproj 'gcloud config set project'
+abbr proj 'gcloud config get-value project'
+abbr build 'gcloud container builds submit'
 
 # Simple tools
 
