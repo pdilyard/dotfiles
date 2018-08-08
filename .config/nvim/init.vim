@@ -4,6 +4,7 @@ Plug 'airblade/vim-gitgutter' " Shows a diff in the gutter
 Plug 'ap/vim-css-color' " Highlight hex colors
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' } " LSP
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
+Plug 'dhruvasagar/vim-table-mode' " Easy markdown table editing
 Plug 'easymotion/vim-easymotion' " Jump to characters
 Plug 'haya14busa/incsearch.vim' " Improved searching
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' } " fzf binary
