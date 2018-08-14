@@ -28,6 +28,7 @@ Plug 'tomasr/molokai' " Colorscheme
 Plug 'tpope/tpope-vim-abolish' " Abbreviation, Substitution, Coercion
 Plug 'tpope/vim-endwise' " Auto-insert do/end
 Plug 'tpope/vim-fugitive' " Git integration
+Plug 'tpope/vim-obsession' " Save and restore sessions
 Plug 'tpope/vim-repeat' " Use . for more complex commands
 Plug 'tpope/vim-surround' " Surrounding things in characters
 Plug 'tpope/vim-unimpaired' " Simple mappings for transforming text
