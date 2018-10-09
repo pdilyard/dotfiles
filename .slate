@@ -58,8 +58,8 @@ alias apptrigger ctrl,shift
 # quick switching to commonly used apps
 bind c:${apptrigger} focus 'Google Chrome'
 bind s:${apptrigger} focus 'Slack'
-bind t:${apptrigger} focus 'Terminal'
-bind space:${apptrigger} focus 'Terminal'
+bind t:${apptrigger} focus 'Alacritty'
+bind space:${apptrigger} focus 'Alacritty'
 
 # movement keys
 bind left:${movetrigger} ${leftHalf}

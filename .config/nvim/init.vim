@@ -7,6 +7,8 @@ Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'dhruvasagar/vim-table-mode' " Easy markdown table editing
 Plug 'easymotion/vim-easymotion' " Jump to characters
 Plug 'haya14busa/incsearch.vim' " Improved searching
+Plug 'iamcco/markdown-preview.vim' " Markdown preview
+Plug 'iamcco/mathjax-support-for-mkdp' " Mathjax markdown
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' } " fzf binary
 Plug 'junegunn/fzf.vim' " fzf vim plugin
 Plug 'mattn/emmet-vim' " emmet HTML editing
