@@ -2,7 +2,7 @@
 	email = paul.dilyard@gmail.com
 	name = Paul Dilyard
 [credential]
-	helper = osxkeychain
+	helper = store
 [hub]
 	protocol = https
 [core]
