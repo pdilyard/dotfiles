@@ -1,0 +1,32 @@
+separator_block_width=50
+markup=none
+
+[disk]
+command=echo -n "Disk "; ~/.config/i3blocks/disk/disk
+interval=30
+
+[cpu_usage]
+command=echo -n "CPU "; ~/.config/i3blocks/cpu_usage/cpu_usage
+interval=10
+
+[memory]
+command=echo -n "MEM "; ~/.config/i3blocks/memory/memory
+interval=30
+
+[network]
+command=nmcli -t -f active,ssid dev wifi | grep 'yes' | sed 's/yes://' | tr -d '\n'; echo -n ' ('; nmcli -t -f active,signal dev wifi | grep 'yes' | sed 's/yes://' | tr -d '\n'; echo -n ')'
+interval=10
+
+[volume-pulseaudio]
+command=~/.config/i3blocks/volume-pulseaudio/volume-pulseaudio
+interval=once
+signal=1
+
+[battery2]
+command=~/.config/i3blocks/battery2/battery2
+markup=pango
+interval=30
+
+[time]
+command=date '+%A :: %b %d %Y :: %I:%M%P'
+interval=1
