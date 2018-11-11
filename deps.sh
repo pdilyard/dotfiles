@@ -24,7 +24,10 @@ sudo apt install -y \
   software-properties-common \
   stow \
   tmux \
-  tree
+  tree \
+  lxappearance \
+  gtk-chtheme \
+  qt4-qtconfig
 
 #
 # vim-plug
