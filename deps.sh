@@ -15,9 +15,12 @@ sudo apt install -y \
   ca-certificates \
   curl \
   docker-ce \
+  docker-compose \
   ffmpeg \
   fish \
   git \
+  google-cloud-sdk \
+  kubectl \
   imagemagick \
   jq \
   neovim \
