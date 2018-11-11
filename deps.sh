@@ -27,7 +27,8 @@ sudo apt install -y \
   tree \
   lxappearance \
   gtk-chtheme \
-  qt4-qtconfig
+  qt4-qtconfig \
+  rofi
 
 #
 # vim-plug
