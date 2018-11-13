@@ -28,6 +28,6 @@ markup=pango
 interval=30
 
 [time]
-command=date '+%A %b %d %Y' | tr -d '\n'; echo -n "<span color='white'>"; date '+%l:%M%P  ' | tr -d '\n'; echo -n "</span>";
+command=date '+%A, %b %d, %Y  ' | tr -d '\n'; echo -n "<span color='white'>"; date '+%l:%M%P  ' | tr -d '\n'; echo -n "</span>";
 markup=pango
 interval=1
