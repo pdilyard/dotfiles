@@ -8,6 +8,10 @@ smart_borders on
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Fix dialogs (like Chrome's Upload/Save As)
+floating_minimum_size 500x500
+floating_maximum_size 500x500
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
