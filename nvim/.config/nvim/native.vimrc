@@ -4,6 +4,9 @@
 " Contains keymappings and settings for features that come with neovim by default
 "
 
+" Configure python with pyenv
+let g:python3_host_prog = '/home/pdilyard/.pyenv/versions/3.6.7/bin/python'
+
 " Use space as leader key
 let mapleader="\<Space>"
 
