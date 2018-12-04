@@ -23,7 +23,6 @@ Plug 'sheerun/vim-polyglot' " Automatic syntax highlighting
 Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'commit': '865747efe41ea1d923758617d71e8e5b59da292e' } " Auto-completion
 Plug 'sirver/ultisnips' " Snippet engine
 Plug 'sjl/gundo.vim' " Visual undo tree
-Plug 'slashmili/alchemist.vim' " Elixir support
 Plug 'styled-components/vim-styled-components' " Styled-components highlighting
 Plug 'terryma/vim-expand-region' " Expand visually selected region
 Plug 'tomasr/molokai' " Colorscheme
