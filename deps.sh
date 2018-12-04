@@ -8,31 +8,27 @@ sudo apt update -y
 # Install packages
 #
 sudo apt install -y \
-  ack \
-  apt-transport-https \
-  awscli \
-  build-essential \
-  ca-certificates \
-  curl \
+  #ack \
+  #apt-transport-https \
+  #awscli \
+  #build-essential \
+  #ca-certificates \
+  #curl \
   docker-ce \
   docker-compose \
-  ffmpeg \
-  fish \
-  git \
+  #ffmpeg \
+  #fish \
+  #git \
   google-cloud-sdk \
   kubectl \
-  imagemagick \
-  jq \
-  neovim \
-  software-properties-common \
-  stow \
-  tmux \
-  tree \
-  lxappearance \
-  gtk-chtheme \
-  qt4-qtconfig \
-  rofi \
-  xclip
+  #imagemagick \
+  #jq \
+  #neovim \
+  #software-properties-common \
+  #stow \
+  #tmux \
+  #tree \
+  #xclip
 
 #
 # vim-plug
