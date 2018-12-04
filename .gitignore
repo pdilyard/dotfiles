@@ -1,1 +1,3 @@
-*
+fish/.config/fish/completions/
+fish/.config/fish/conf.d/
+fish/.config/fish/fishd.lucky
