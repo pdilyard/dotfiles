@@ -5,7 +5,7 @@
 "
 
 " Configure python with pyenv
-let g:python3_host_prog = '/home/pdilyard/.pyenv/versions/3.6.7/bin/python'
+let g:python3_host_prog = '/home/pdilyard/.pyenv/versions/3.7.1/bin/python'
 
 " Use space as leader key
 let mapleader="\<Space>"
@@ -107,10 +107,10 @@ cnoremap <C-d> <C-w>
 nnoremap <C-f> :Explore<CR>
 
 " Copy to clipboard
-vnoremap <leader>y "*y
-nnoremap <leader>Y "*yg_
-nnoremap <leader>y "*y
-nnoremap <leader>yy "*yy
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+yg_
+nnoremap <leader>y "+y
+nnoremap <leader>yy "+yy
 
 " Insert lines above/below in normal mode
 nnoremap <Leader>k O<Esc>j

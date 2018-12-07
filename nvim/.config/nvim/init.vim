@@ -3,9 +3,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'airblade/vim-gitgutter' " Shows a diff in the gutter
 Plug 'ap/vim-css-color' " Highlight hex colors
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' } " LSP
+Plug 'blueyed/vim-python-pep8-indent', { 'branch': 'searchpair-timeout' }
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'dhruvasagar/vim-table-mode' " Easy markdown table editing
 Plug 'easymotion/vim-easymotion' " Jump to characters
+Plug 'editorconfig/editorconfig-vim' " Shared editor configuration for teams in .editorconfig
 Plug 'haya14busa/incsearch.vim' " Improved searching
 Plug 'iamcco/markdown-preview.vim' " Markdown preview
 Plug 'iamcco/mathjax-support-for-mkdp' " Mathjax markdown
@@ -23,7 +25,6 @@ Plug 'sheerun/vim-polyglot' " Automatic syntax highlighting
 Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'commit': '865747efe41ea1d923758617d71e8e5b59da292e' } " Auto-completion
 Plug 'sirver/ultisnips' " Snippet engine
 Plug 'sjl/gundo.vim' " Visual undo tree
-Plug 'styled-components/vim-styled-components' " Styled-components highlighting
 Plug 'terryma/vim-expand-region' " Expand visually selected region
 Plug 'tomasr/molokai' " Colorscheme
 Plug 'tpope/tpope-vim-abolish' " Abbreviation, Substitution, Coercion
