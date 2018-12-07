@@ -45,9 +45,15 @@ abbr sproj 'gcloud config set project'
 abbr proj 'gcloud config get-value project'
 abbr build 'gcloud container builds submit'
 
+# Remesh aliases
+source ~/github.com/remesh/remesh/toolkit/aliases.fish
+
 # pyenv
 
 set -x PATH "/home/pdilyard/.pyenv/bin" $PATH
 status --is-interactive; and . (pyenv init -|psub)
 status --is-interactive; and . (pyenv virtualenv-init -|psub)
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/pdilyard/google-cloud-sdk/path.fish.inc' ]; . '/home/pdilyard/google-cloud-sdk/path.fish.inc'; end
