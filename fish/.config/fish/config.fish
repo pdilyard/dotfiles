@@ -6,12 +6,9 @@ abbr lock '/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 set -U vim nvim
 set -U SHELL /usr/local/bin/fish
-set -U I3_BLOCKS_SCRIPT_DIR ~/.config/i3blocks
 
-alias c='xclip'
-alias v='xclip -o'
-alias cs='xclip -selection clipboard'
-alias vs='xclip -o -selection clipboard'
+alias xcopy='xclip -selection clipboard'
+alias xpaste='xclip -o -selection clipboard'
 
 # Git abbreviations
 
