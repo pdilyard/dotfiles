@@ -1,0 +1,14 @@
+ack
+curl
+ffmpeg
+fish
+git
+docker
+docker-compose
+imagemagick
+jq
+neovim
+stow
+tmux
+tree
+xclip
