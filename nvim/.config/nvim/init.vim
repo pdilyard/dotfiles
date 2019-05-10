@@ -1,23 +1,23 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'chriskempson/base16-vim' " Color schemes
 Plug 'airblade/vim-gitgutter' " Shows a diff in the gutter
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' } " LSP
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
-Plug 'dhruvasagar/vim-table-mode' " Easy markdown table editing
-Plug 'easymotion/vim-easymotion' " Jump to characters
 Plug 'editorconfig/editorconfig-vim' " Shared editor configuration for teams in .editorconfig
+Plug 'elixir-editors/vim-elixir' " Elixir syntax
 Plug 'haya14busa/incsearch.vim' " Improved searching
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' } " fzf binary
 Plug 'junegunn/fzf.vim' " fzf vim plugin
+Plug 'justinmk/vim-sneak' " Jump around with s{char}{char}
+Plug 'kareeeeem/python-docstring-comments' " Highlight Python docstrings as comments
+Plug 'leafgarland/typescript-vim' " Typescript syntax highlighting
+Plug 'ludovicchabant/vim-gutentags' " Manage tag files
+Plug 'martinda/jenkinsfile-vim-syntax' " Highlight Jenkinsfile
 Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
 Plug 'mileszs/ack.vim' " Search across files
 Plug 'raimondi/delimitmate' " Auto-complete quotes, parens, etc.
 Plug 'scrooloose/nerdcommenter' " Automatically comment lines
 Plug 'scrooloose/nerdtree' " NERDTree
-Plug 'sheerun/vim-polyglot' " Automatic syntax highlighting
-Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins', 'commit': '865747efe41ea1d923758617d71e8e5b59da292e' } " Auto-completion
-Plug 'sirver/ultisnips' " Snippet engine
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
 Plug 'terryma/vim-expand-region' " Expand visually selected region
 Plug 'tomasr/molokai' " Colorscheme
 Plug 'tpope/tpope-vim-abolish' " Abbreviation, Substitution, Coercion

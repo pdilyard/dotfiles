@@ -5,6 +5,13 @@
 "
 
 "
+" ------------------------
+" vim-python/python-syntax
+" ------------------------
+"
+let g:python_highlight_all = 1
+
+"
 " ----------------------
 " airblade/vim-gitgutter
 " ----------------------
@@ -13,19 +20,6 @@ nnoremap <Leader>gp <Plug>GitGutterPreviewHunk
 nnoremap <Leader>gr <Plug>GitGutterUndoHunk
 nnoremap <Leader>gu <Plug>GitGutterUndoHunk
 nnoremap <Leader>gs <Plug>GitGutterStageHunk
-
-"
-" -------------------------
-" easymotion/vim-easymotion
-" -------------------------
-"
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-map \ <Plug>(easymotion-prefix)
-" Jump to character
-nmap \s <Plug>(easymotion-overwin-f)
-" Jump to lines
-nmap \j <Plug>(easymotion-j)
-nmap \k <Plug>(easymotion-k)
 
 "
 " ------------------------
@@ -45,15 +39,44 @@ set hlsearch
 nmap <C-p> :Files<CR>
 nmap <C-b> :Buffers<CR>
 
+
 "
-" ---------------
-" mattn/emmet-vim
-" ---------------
+" ------------------
+" justinmk/vim-sneak
+" ------------------
 "
-let g:user_emmet_install_global = 0
-autocmd FileType javascript.jsx,html,css EmmetInstall
-imap <C-e> <plug>(emmet-expand-abbr)
-nmap <C-e> <plug>(emmet-expand-abbr)
+let g:sneak#label = 1
+nmap s <Plug>Sneak_s
+nmap S <Plug>Sneak_S
+xmap s <Plug>Sneak_s
+xmap S <Plug>Sneak_S
+omap s <Plug>Sneak_s
+omap S <Plug>Sneak_S
+map ; <Plug>Sneak_;
+map , <Plug>Sneak_,
+nmap f <Plug>Sneak_f
+nmap F <Plug>Sneak_F
+xmap f <Plug>Sneak_f
+xmap F <Plug>Sneak_F
+omap f <Plug>Sneak_f
+omap F <Plug>Sneak_F
+nmap t <Plug>Sneak_t
+nmap T <Plug>Sneak_T
+xmap t <Plug>Sneak_t
+xmap T <Plug>Sneak_T
+omap t <Plug>Sneak_t
+omap T <Plug>Sneak_T
+nmap s <Plug>SneakLabel_s
+nmap S <Plug>SneakLabel_S
+
+"
+" ----------------------------
+" ludovicchabant/vim-gutentags
+" ----------------------------
+"
+set statusline+=%{gutentags#statusline()}
+let g:gutentags_project_root = ['Makefile']
+let g:gutentags_cache_dir = '~/.gutentags'
 
 "
 " --------------------------
@@ -71,16 +94,6 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-
-"
-" ----------------
-" mtth/scratch.vim
-" ----------------
-"
-let g:scratch_autohide = 0
-let g:scratch_insert_autohide = 0
-let g:scratch_top = 0
-nnoremap gs :Scratch<CR>
 
 "
 " ------------------------
@@ -108,40 +121,11 @@ map <C-n> :NERDTreeToggle<CR>
 
 "
 " --------------------
-" sheerun/vim-polyglot
-" --------------------
-"
-let g:javascript_plugin_flow = 1
-
-"
-" --------------------
 " shougo/deoplete.nvim
 " --------------------
 "
 let g:deoplete#enable_at_startup = 1
-
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-endfunction
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-"
-" ----------------
-" sirver/ultisnips
-" ----------------
-"
-let g:UltiSnipsExpandTrigger="<c-y>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsSnippetDirectories = ['ultisnips']
-
-"
-" -------------
-" sjl/gundo.vim
-" -------------
-"
-nnoremap <leader>u :GundoToggle<CR>
 
 "
 " --------------

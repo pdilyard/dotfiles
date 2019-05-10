@@ -11,7 +11,7 @@ let g:python3_host_prog = '/home/pdilyard/.pyenv/versions/3.7.1/bin/python'
 let mapleader="\<Space>"
 
 " Use semicolon as command key
-noremap ; :
+" noremap ; :
 
 " Set ttyfast
 set ttyfast
@@ -122,4 +122,3 @@ nnoremap <Leader>l a<space><Esc>h
 
 " Run a shell command with !
 nnoremap ! :!
-

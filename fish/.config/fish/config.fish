@@ -30,13 +30,13 @@ abbr gs 'git status'
 
 # Elixir abbreviations
 
-abbr mt 'mix test'
 abbr phx 'iex -S mix phx.server'
 
 # Google Compute abbreviations
 
 abbr gssh 'gcloud compute ssh'
 abbr k 'kubectl'
+abbr k3 'k3s kubectl'
 abbr p 'pachctl'
 abbr sproj 'gcloud config set project'
 abbr proj 'gcloud config get-value project'
@@ -44,6 +44,9 @@ abbr build 'gcloud container builds submit'
 
 # Remesh aliases
 source ~/github.com/remesh/remesh/toolkit/aliases.fish
+
+abbr mt 'make test'
+abbr mtf 'make test-fast'
 
 # pyenv
 
