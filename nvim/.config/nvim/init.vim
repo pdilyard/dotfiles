@@ -4,16 +4,17 @@ Plug 'airblade/vim-gitgutter' " Shows a diff in the gutter
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'editorconfig/editorconfig-vim' " Shared editor configuration for teams in .editorconfig
 Plug 'elixir-editors/vim-elixir' " Elixir syntax
+Plug 'elmcast/elm-vim' " Elm syntax highlighting
 Plug 'haya14busa/incsearch.vim' " Improved searching
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' } " fzf binary
 Plug 'junegunn/fzf.vim' " fzf vim plugin
 Plug 'justinmk/vim-sneak' " Jump around with s{char}{char}
 Plug 'kareeeeem/python-docstring-comments' " Highlight Python docstrings as comments
 Plug 'leafgarland/typescript-vim' " Typescript syntax highlighting
-Plug 'ludovicchabant/vim-gutentags' " Manage tag files
 Plug 'martinda/jenkinsfile-vim-syntax' " Highlight Jenkinsfile
 Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
 Plug 'mileszs/ack.vim' " Search across files
+Plug 'peitalin/vim-jsx-typescript' " TSX React typescript files
 Plug 'raimondi/delimitmate' " Auto-complete quotes, parens, etc.
 Plug 'scrooloose/nerdcommenter' " Automatically comment lines
 Plug 'scrooloose/nerdtree' " NERDTree

@@ -35,18 +35,23 @@ abbr phx 'iex -S mix phx.server'
 # Google Compute abbreviations
 
 abbr gssh 'gcloud compute ssh'
-abbr k 'kubectl'
-abbr k3 'k3s kubectl'
-abbr p 'pachctl'
 abbr sproj 'gcloud config set project'
 abbr proj 'gcloud config get-value project'
 abbr build 'gcloud container builds submit'
+
+# Docker/Kubernetes abbr
+
+abbr k 'kubectl'
+abbr dc 'docker-compose'
+abbr dcr 'docker-compose run --rm'
 
 # Remesh aliases
 source ~/github.com/remesh/remesh/toolkit/aliases.fish
 
 abbr mt 'make test'
 abbr mtf 'make test-fast'
+
+alias grafana="kubectl port-forward -n remesh (kubectl get pods -n remesh -l app=grafana -o jsonpath='{.items[0].metadata.name}') 3030:3000"
 
 # pyenv
 
@@ -57,3 +62,8 @@ status --is-interactive; and . (pyenv virtualenv-init -|psub)
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/pdilyard/google-cloud-sdk/path.fish.inc' ]; . '/home/pdilyard/google-cloud-sdk/path.fish.inc'; end
+
+
+# Go
+set -gx GOPATH $HOME/golang
+set -x PATH $GOPATH/bin $PATH

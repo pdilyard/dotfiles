@@ -46,14 +46,14 @@ nmap <C-b> :Buffers<CR>
 " ------------------
 "
 let g:sneak#label = 1
-nmap s <Plug>Sneak_s
-nmap S <Plug>Sneak_S
-xmap s <Plug>Sneak_s
-xmap S <Plug>Sneak_S
-omap s <Plug>Sneak_s
-omap S <Plug>Sneak_S
-map ; <Plug>Sneak_;
-map , <Plug>Sneak_,
+nmap , <Plug>Sneak_s
+nmap < <Plug>Sneak_S
+xmap , <Plug>Sneak_s
+xmap < <Plug>Sneak_S
+omap , <Plug>Sneak_s
+omap < <Plug>Sneak_S
+map ' <Plug>Sneak_;
+map ; <Plug>Sneak_,
 nmap f <Plug>Sneak_f
 nmap F <Plug>Sneak_F
 xmap f <Plug>Sneak_f
@@ -66,17 +66,8 @@ xmap t <Plug>Sneak_t
 xmap T <Plug>Sneak_T
 omap t <Plug>Sneak_t
 omap T <Plug>Sneak_T
-nmap s <Plug>SneakLabel_s
-nmap S <Plug>SneakLabel_S
-
-"
-" ----------------------------
-" ludovicchabant/vim-gutentags
-" ----------------------------
-"
-set statusline+=%{gutentags#statusline()}
-let g:gutentags_project_root = ['Makefile']
-let g:gutentags_cache_dir = '~/.gutentags'
+nmap , <Plug>SneakLabel_s
+nmap < <Plug>SneakLabel_S
 
 "
 " --------------------------

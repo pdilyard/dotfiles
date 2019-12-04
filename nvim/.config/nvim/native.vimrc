@@ -10,7 +10,8 @@ let g:python3_host_prog = '/home/pdilyard/.pyenv/versions/3.7.1/bin/python'
 " Use space as leader key
 let mapleader="\<Space>"
 
-" Use semicolon as command key
+" Use semicolon as command key (commented out because I'm using ; for
+" vim-sneak)
 " noremap ; :
 
 " Set ttyfast
