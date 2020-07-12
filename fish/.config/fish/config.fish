@@ -46,7 +46,6 @@ abbr dc 'docker-compose'
 abbr dcr 'docker-compose run --rm'
 
 # Remesh aliases
-source ~/github.com/remesh/remesh/toolkit/aliases.fish
 
 abbr mt 'make test'
 abbr mtf 'make test-fast'
@@ -56,14 +55,13 @@ alias grafana="kubectl port-forward -n remesh (kubectl get pods -n remesh -l app
 # pyenv
 
 set -x PATH "/home/pdilyard/.pyenv/bin" $PATH
-status --is-interactive; and . (pyenv init -|psub)
-status --is-interactive; and . (pyenv virtualenv-init -|psub)
+status --is-interactive; and source (pyenv init -|psub)
 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/pdilyard/google-cloud-sdk/path.fish.inc' ]; . '/home/pdilyard/google-cloud-sdk/path.fish.inc'; end
 
 
 # Go
 set -gx GOPATH $HOME/golang
 set -x PATH $GOPATH/bin $PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/pdilyard/google-cloud-sdk/path.fish.inc' ]; . '/Users/pdilyard/google-cloud-sdk/path.fish.inc'; end

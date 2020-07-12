@@ -5,7 +5,7 @@
 "
 
 " Configure python with pyenv
-let g:python3_host_prog = '/home/pdilyard/.pyenv/versions/3.7.1/bin/python'
+let g:python3_host_prog = "/Users/pdilyard/.pyenv/versions/3.7.1/bin/python"
 
 " Use space as leader key
 let mapleader="\<Space>"
