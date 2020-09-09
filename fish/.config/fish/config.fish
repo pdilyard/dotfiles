@@ -65,3 +65,10 @@ set -x PATH $GOPATH/bin $PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/pdilyard/google-cloud-sdk/path.fish.inc' ]; . '/Users/pdilyard/google-cloud-sdk/path.fish.inc'; end
+
+
+# rbenv
+status --is-interactive; and source (rbenv init -|psub)
+
+# nodenv
+status --is-interactive; and source (nodenv init -|psub)
