@@ -19,17 +19,19 @@ export EDITOR='vim'
 # Terminal
 TERM="screen-256color"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
+alias gs="git status -sb"
+alias gcm="git commit -m"
+alias d="docker"
+alias dc="docker-compose"
+alias vim="nvim"
 
 # pyenv
-alias vim="nvim"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+fi
+
+# rbenv
+if command -v rbenv 1>/dev/null 2>&1; then
+  eval "$(rbenv init -)"
 fi
