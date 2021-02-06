@@ -25,6 +25,8 @@ alias gcm="git commit -m"
 alias d="docker"
 alias dc="docker-compose"
 alias vim="nvim"
+alias rt="rails test"
+alias rc="rails console"
 
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then

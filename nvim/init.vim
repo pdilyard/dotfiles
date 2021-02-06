@@ -4,6 +4,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter' " Shows a diff in the gutter
+Plug 'chrisbra/colorizer' " Highlight CSS colors
 Plug 'christoomey/vim-tmux-navigator' " Navigate vim and tmux panes the same way
 Plug 'editorconfig/editorconfig-vim' " Shared editor configuration for teams in .editorconfig
 Plug 'haya14busa/incsearch.vim' " Improved searching
@@ -13,6 +14,7 @@ Plug 'justinmk/vim-sneak' " Jump around with s{char}{char}
 Plug 'kareeeeem/python-docstring-comments' " Highlight Python docstrings as comments
 Plug 'leafgarland/typescript-vim' " Typescript syntax highlighting
 Plug 'martinda/jenkinsfile-vim-syntax' " Highlight Jenkinsfile
+Plug 'mattn/emmet-vim' " HTML ta HTML expansionexpansion
 Plug 'maxbrunsfeld/vim-yankstack' " Cycle through yanked items
 Plug 'mileszs/ack.vim' " Search across files
 Plug 'peitalin/vim-jsx-typescript' " TSX React typescript files
@@ -162,6 +164,9 @@ nnoremap <Leader>gp <Plug>GitGutterPreviewHunk
 nnoremap <Leader>gr <Plug>GitGutterUndoHunk
 nnoremap <Leader>gu <Plug>GitGutterUndoHunk
 nnoremap <Leader>gs <Plug>GitGutterStageHunk
+
+" chrisbra/Colorizer
+let g:colorizer_auto_filetype = "css,scss,html"
 
 " haya14busa/incsearch.vim
 map /  <Plug>(incsearch-forward)
